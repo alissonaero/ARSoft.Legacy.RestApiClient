@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>	
+    <OutputType>Library</OutputType>
+    <AssemblyName>ARSoft.Legacy.RestApiClient</AssemblyName>
+    <RootNamespace>ARSoft.Legacy.RestApiClient</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>ARSoft.Legacy.RestApiClient</PackageId>
+    <Version>1.5.0</Version>
+    <Authors>Alisson Santana</Authors>
+    <Company>ARSoft</Company>
+    <Description>A modern, resilient HTTP API client library for .NET Framework applications, providing clean async HTTP operations with built-in retry policies using Polly v8, comprehensive error handling, and support for legacy environments like Windows Forms.</Description>
+    <PackageTags>api-client;http;rest;polly;newtonsoft;json;windows-forms;dotnet-framework</PackageTags>
+    <RepositoryUrl>https://github.com/alissonsantana/ARSoft.RestApiClient</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>default.pfx</AssemblyOriginatorKeyFile>
+		  <PackageReleaseNotes>
+		  Modern .NET Support: Built for .NET 4.8
+		  System.Text.Json: High-performance JSON serialization
+		  Polly Integration: Built-in retry policies with exponential backoff using modern Polly extensions
+		  Structured Logging: ILogger integration for comprehensive request/response logging
+		  Multiple Auth Types: Bearer, Basic, and API Key authentication support
+		  Clean Architecture: SOLID principles with dependency injection support
+		  Comprehensive Error Handling: Detailed error responses with HTTP status codes
+		  Async/Await: Full asynchronous operation support with cancellation tokens
+	  </PackageReleaseNotes>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <PackageReadmeFile>readme.md</PackageReadmeFile>
+	  <PackageIcon>icon.png</PackageIcon>
+	  <AssemblyVersion>1.5.0</AssemblyVersion>
+	  <FileVersion>1.5.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Polly" Version="8.6.1" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="9.0.6" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.6.3" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.2" />
+	<None Include="icon.png" Pack="true" PackagePath="\" />
+<None Include="readme.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="default.pfx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+</Project>
